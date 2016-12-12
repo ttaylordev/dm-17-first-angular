@@ -1,0 +1,1 @@
+var app = angular.module('angular1', ['ui.router']); // jshint ignore:line
