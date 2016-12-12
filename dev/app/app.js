@@ -1,1 +1,1 @@
-var app = angular.module('angular1', ['ui.router']); // jshint ignore:line
+var app = angular.module('friendsList', ['ui.router']); // jshint ignore:line

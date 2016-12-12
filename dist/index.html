@@ -1,20 +1,33 @@
 <!DOCTYPE html>
-<html ng-app="angular1">
-  <head>
-    <meta charset="utf-8">
-    <title>First dm-17 angular app</title>
-    <!-- <link rel="stylesheet" href="./dev/styles/style.css"> -->
-    <link rel="stylesheet" href="/bundle.css">
-  </head>
-  <body ng-controller="mainCtrl">
+<html ng-app="friendsList">
 
-    <p>Hello Bob!!</p>
-    {{test}}
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DM-17's First Angular Exercise</title>
+  <link rel="stylesheet" href="/bundle.css">
+</head>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.js"></script>
-    <!-- <script src="app.js"></script>
-    <script src="mainController.js"></script> -->
-    <script src="./scripts/bundle.js"></script>
-  </body>
+<body ng-controller="mainCtrl">
+
+  <p>My name is: {{name}}</p>
+  <h1>Friends List</h1>
+    <div class="friends-list-items" ng-repeat="friend in friends">
+      <p>{{friend}}</p>
+    </div>
+  <input ng-model="friendName">
+  <button name="add-friend-button" ng-click="addFriend(friendName);">Add Friend</button>
+
+<!-- ///  Search functionality  \\\ -->
+  <!-- <input type="text" name="name" ng-model="searchBy" placeholder="Enter Friend Name..."/>
+  <ul>
+  <li ng-repeat="friend in friends | filter: searchBy">{{friend.name}}</li>
+</ul> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.js"></script>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.2/angular-ui-router.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.2/angular-ui-router.min.js"></script> -->
+  <script src="./scripts/bundle.js"></script>
+</body>
+
 </html>
